@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dropdown Menu</title>
+    <script>
+      function showTextBox()
+       {
+        var category = document.getElementById("category");
+        var otherBox = document.getElementById("otherBox");
+
+        if (category.value == "Other") 
+        {
+          otherBox.style.display = "block";
+        }
+         else 
+         {
+          otherBox.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+  <form>
+    <label for="category">Category:</label>
+    <select id="category" name="category" onchange="showTextBox()">
+      <option value="Hindu">Hindu</option>
+      <option value="Muslim">Muslim</option>
+      <option value="Esai">Esai</option>
+      <option value="Sikh">Sikh</option>
+      <option value="Other">Other</option>
+    </select>
+    <br />
+    <div id="otherBox" style="display: none;">
+      <label for="other">Other:</label>
+      <input type="text" id="other" name="other" />
+    </div>
+    <input type="submit" onclick="showTextBox()">
+  </form>
+  </body>
+</html>

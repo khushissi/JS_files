@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function no()
+    {
+        var n=document.getElementById('i').value;
+        var t=' ';
+        i=1;
+        while(i<=n)
+        {
+            t+=i+"<br>"
+           i= i++;
+            document.getElementById('s').innerHTML=t;
+        }
+    }
+</script>
+<body>
+    enter the value of n<input type="text" id="i">
+    <input type="submit" onclick="no()"><br>
+    <p id="s">show result</p>
+</body> 
+</html>

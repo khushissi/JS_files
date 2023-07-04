@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function val()
+    {
+        var uname=document.getElementById('uname').value;
+        var pwd=document.getElementById('pwd').value;
+        var pwd1=document.getElementById('pwd1').value;
+        var state=document.getElementById('state').value;
+        var gen=document.getElementById('gen');
+        var gen1=document.getElementById('gen1');
+        var cricket=document.getElementById('cricket');
+        var football=document.getElementById('football');
+        var hockey=document.getElementById('hockey');
+        var img=document.getElementById('img').value;
+        var ch=document.getElementById('ch');
+    if(uname=='')
+    {
+        alert("plese enter name");
+        return false;
+    }
+    else if(pwd=='')
+    {
+        alert("plese enter password");
+        return false;   
+    }
+    else if(pwd1=='')
+    {
+        alert("plese Re-enter password");
+        return false;   
+    }
+    else if(state=='')
+    {
+        alert("plese select state");
+        return false;   
+    }
+    else if(gen.checked==false && gen1.checked==false)
+    {
+        alert("plese select gender");
+        return false;   
+    }
+    else if(cricket.checked==false && football.checked==false && hockey.checked==false)
+    {
+        alert("plese select hobbies");
+        return false;   
+    }
+    else if(img=='')
+    {
+        alert("plese select file");
+        return false;   
+    }
+    else if(ch.checked==false )
+    {
+        alert("plese select term and cond.");
+        return false;   
+    }
+    else
+    {
+        return true;
+    }
+
+    }
+
+</script>
+<body>
+    <form action="">
+        <table>
+            <tr><th>Enter name</th><td><input type="text" id="uname" ></td></tr>
+            <tr><th>password</th><td><input type="text" id="pwd"></td></tr>
+            <tr><th>Re-Enter password</th><td><input type="text" id="pwd1"></td></tr>
+            <tr><th>Select state</th><td><select id="state">
+            <option value="">--------</option>
+            <option>mp</option>
+            <option>up</option>
+            </select></td></tr>
+            <tr><th>Select Gender</th><td> male<input type="radio" id="gen" name="gen" value="male" > female<input type="radio" id="gen1" name="gen" value="female"></td></tr>
+
+            <tr><th>Select hobbies</th><td> circket<input type="checkbox" id="cricket" name="hobbies" value="circket" > football<input type="checkbox" id="football" name="hobbies" value="football">hockey<input type="checkbox" id="hockey" name="hobbies" value="hockey"></td></tr>
+            <tr><th>select file</th><td><input type="file" id="img"></td></tr>
+            <tr><td><input type="checkbox" id="ch" style="margin-left:50px;" name="ch" value="true"></td> <th> i accept the term and cond.</th></tr>
+
+            <tr><td></td><td><input type="submit" onclick="return val()"><input type="reset"></td></tr>
+
+            
+        </table>
+    </form>
+</body>
+</html>

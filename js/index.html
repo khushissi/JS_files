@@ -1,0 +1,103 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function val()
+    {
+        var uname=document.getElementById('uname').value;
+        var email =document.getElementById('email').value;
+        var no=document.getElementById('no').value;
+        var address=document.getElementById('address').value;
+        var school=document.getElementById('school').value;
+         
+        var l=/^[a-zA-Z ]+$/;
+        var d = /^([a-zA-Z0-9_\$\#\*])+\@gmail+\.com$/;
+        var e=/^[0-9]+$/;
+        var f=/^[a-zA-Z0-9_]+$/;
+        
+    if(uname=='')
+    {
+        alert("please enter name");
+        return false;
+    }
+    else if(!uname.match(l))
+    {
+        alert("please enter correct name");
+        return false;
+    }
+
+    else if(email=='')
+    {
+        alert("please enter email");
+        return false;   
+    }
+    else if(!email.match(d))
+    {
+        alert("please enter correct email");
+        return false;   
+    }
+    else if(no=='')
+    {
+        alert("please enter no");
+        return false;   
+    }
+    else if(!no.match(e))
+    {
+        alert("please enter correct mobile no");
+        return false;   
+    }
+      
+    
+    else if(address=='')
+    {
+        alert("please enter address");
+        return false;   
+    }
+    else if(!address.match(f))
+    {
+        alert("please enter correct addres");
+        return false;   
+    }
+      
+   else if(school=='')
+    {
+        alert("please enter school name");
+        return false;
+    }
+    else if(!school.match(l))
+    {
+        alert("please enter correct school name");
+        return false;
+    }
+
+    else
+    {
+        return true;
+    }
+
+    }
+
+</script>
+<body style="background-color: rgb(254, 245, 234); ">
+
+<h1 style="color:brown"> Welcome To Prakhar Agrawal Commerce Classes (PACC)</h1>
+
+    <form action="">
+        <table>
+            <tr><th>Enter name</th><td><input type="text" id="uname" ></td></tr>
+            <tr><th>email</th><td><input type="text" id="email"></td></tr>
+            <tr><th>mobile no</th><td><input type="text" id="no" maxlength="10"></td></tr>
+
+            <tr><th>address</th><td><input type="text" id="address" ></td></tr>
+            <tr><th>school name</th><td><input type="text" id="school"></td></tr>
+            <tr><td></td><td><input type="submit" onclick="return val()"><input type="reset"></td></tr>
+           
+            
+        </table>
+    </form>
+</body>
+</html>

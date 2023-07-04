@@ -1,0 +1,17 @@
+<html>
+  <script>
+    function no() {
+      var n = document.getElementById("n").value;
+      var t = ' ';
+      for (i = 1; i <= n; i++) {
+        t += i + "<br>";
+      }
+      document.getElementById("s").innerHTML = t;
+    }
+  </script>
+  <body>
+    Enter the value of n<input type="text" id="n"><br><br>
+    <input type="submit" onclick="no()">
+    <p id="s">show result</p>
+  </body>
+</html>
